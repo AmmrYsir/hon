@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ config('app.name', 'Laravel') }}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body class="font-sans antialiased bg-gray-50">
     <div class="min-h-screen flex flex-col">
@@ -14,7 +16,7 @@
                 <div class="flex justify-between h-16">
                     <div class="flex">
                         <div class="shrink-0 flex items-center">
-                            <a href="/" class="font-bold text-xl text-indigo-600">HonBooks</a>
+                            <a href="/" class="font-bold text-xl text-indigo-600">Hon</a>
                         </div>
                         <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                             @role('reader')
