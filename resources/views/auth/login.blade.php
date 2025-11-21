@@ -8,22 +8,10 @@
         @csrf
 
         <!-- Email Address -->
-        <div>
-            <label for="email" class="block font-medium text-sm text-gray-300">Email</label>
-            <input id="email" class="block mt-2 w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-white placeholder-gray-500 focus:border-blue-500 focus:bg-white/10 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm" type="email" name="email" value="{{ old('email') }}" required autofocus placeholder="name@example.com" />
-            @error('email')
-                <span class="text-red-400 text-sm mt-2 block">{{ $message }}</span>
-            @enderror
-        </div>
+        <x-text-input class="mt-6" type="email" name="email" label="Email" placeholder="name@example.com" />
 
         <!-- Password -->
-        <div class="mt-6">
-            <label for="password" class="block font-medium text-sm text-gray-300">Password</label>
-            <input id="password" class="block mt-2 w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-white placeholder-gray-500 focus:border-blue-500 focus:bg-white/10 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm" type="password" name="password" required autocomplete="current-password" placeholder="••••••••" />
-            @error('password')
-                <span class="text-red-400 text-sm mt-2 block">{{ $message }}</span>
-            @enderror
-        </div>
+        <x-text-input class="mt-6" type="password" name="password" label="Password" placeholder="••••••••" />
 
         <div class="flex items-center justify-between mt-6">
             <label for="remember_me" class="inline-flex items-center">
