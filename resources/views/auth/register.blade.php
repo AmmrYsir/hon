@@ -1,7 +1,7 @@
-<x-guest-layout>
-    <div class="mb-4 text-center">
-        <h2 class="text-2xl font-bold text-gray-800">Create Account</h2>
-        <p class="text-gray-600">Join our community</p>
+<x-vibrant-guest-layout>
+    <div class="mb-8 text-center">
+        <h2 class="font-heading text-3xl font-bold text-white">Create Account</h2>
+        <p class="mt-2 text-gray-400">Join our community today</p>
     </div>
 
     <form method="POST" action="{{ route('register') }}">
@@ -9,57 +9,60 @@
 
         <!-- Name -->
         <div>
-            <label for="name" class="block font-medium text-sm text-gray-700">Name</label>
-            <input id="name" class="block mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" type="text" name="name" value="{{ old('name') }}" required autofocus />
+            <label for="name" class="block font-medium text-sm text-gray-300">Name</label>
+            <input id="name" class="block mt-2 w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-white placeholder-gray-500 focus:border-blue-500 focus:bg-white/10 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm" type="text" name="name" value="{{ old('name') }}" required autofocus placeholder="John Doe" />
             @error('name')
-                <span class="text-red-500 text-sm mt-1">{{ $message }}</span>
+                <span class="text-red-400 text-sm mt-2 block">{{ $message }}</span>
             @enderror
         </div>
 
         <!-- Email Address -->
-        <div class="mt-4">
-            <label for="email" class="block font-medium text-sm text-gray-700">Email</label>
-            <input id="email" class="block mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" type="email" name="email" value="{{ old('email') }}" required />
+        <div class="mt-6">
+            <label for="email" class="block font-medium text-sm text-gray-300">Email</label>
+            <input id="email" class="block mt-2 w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-white placeholder-gray-500 focus:border-blue-500 focus:bg-white/10 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm" type="email" name="email" value="{{ old('email') }}" required placeholder="name@example.com" />
             @error('email')
-                <span class="text-red-500 text-sm mt-1">{{ $message }}</span>
+                <span class="text-red-400 text-sm mt-2 block">{{ $message }}</span>
             @enderror
         </div>
 
         <!-- Role Selection -->
-        <div class="mt-4">
-            <label for="role" class="block font-medium text-sm text-gray-700">I want to be a:</label>
-            <select id="role" name="role" class="block mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
-                <option value="reader">Reader</option>
-                <option value="author">Author</option>
+        <div class="mt-6">
+            <label for="role" class="block font-medium text-sm text-gray-300">I want to be a:</label>
+            <select id="role" name="role" class="block mt-2 w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-white focus:border-blue-500 focus:bg-white/10 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm">
+                <option value="reader" class="bg-[#0f111a]">Reader</option>
+                <option value="author" class="bg-[#0f111a]">Author</option>
             </select>
             @error('role')
-                <span class="text-red-500 text-sm mt-1">{{ $message }}</span>
+                <span class="text-red-400 text-sm mt-2 block">{{ $message }}</span>
             @enderror
         </div>
 
         <!-- Password -->
-        <div class="mt-4">
-            <label for="password" class="block font-medium text-sm text-gray-700">Password</label>
-            <input id="password" class="block mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" type="password" name="password" required autocomplete="new-password" />
+        <div class="mt-6">
+            <label for="password" class="block font-medium text-sm text-gray-300">Password</label>
+            <input id="password" class="block mt-2 w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-white placeholder-gray-500 focus:border-blue-500 focus:bg-white/10 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm" type="password" name="password" required autocomplete="new-password" placeholder="••••••••" />
             @error('password')
-                <span class="text-red-500 text-sm mt-1">{{ $message }}</span>
+                <span class="text-red-400 text-sm mt-2 block">{{ $message }}</span>
             @enderror
         </div>
 
         <!-- Confirm Password -->
-        <div class="mt-4">
-            <label for="password_confirmation" class="block font-medium text-sm text-gray-700">Confirm Password</label>
-            <input id="password_confirmation" class="block mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" type="password" name="password_confirmation" required />
+        <div class="mt-6">
+            <label for="password_confirmation" class="block font-medium text-sm text-gray-300">Confirm Password</label>
+            <input id="password_confirmation" class="block mt-2 w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-white placeholder-gray-500 focus:border-blue-500 focus:bg-white/10 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm" type="password" name="password_confirmation" required placeholder="••••••••" />
         </div>
 
-        <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
-                Already registered?
-            </a>
-
-            <button type="submit" class="ml-3 inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
+        <div class="mt-8">
+            <button type="submit" class="w-full rounded-full bg-blue-600 px-4 py-3 text-sm font-semibold text-white shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:bg-blue-500 hover:shadow-[0_0_30px_rgba(37,99,235,0.6)] transition-all duration-300 transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#0f111a]">
                 Register
             </button>
         </div>
+
+        <div class="mt-6 text-center text-sm text-gray-400">
+            Already have an account? 
+            <a href="{{ route('login') }}" class="font-medium text-blue-400 hover:text-blue-300 transition-colors">
+                Log in
+            </a>
+        </div>
     </form>
-</x-guest-layout>
+</x-vibrant-guest-layout>
