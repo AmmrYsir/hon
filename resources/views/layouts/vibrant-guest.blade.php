@@ -47,7 +47,6 @@
         
         <!-- Background Image with Overlay -->
         <div class="fixed inset-0 z-0 h-full w-full overflow-hidden pointer-events-none">
-            <img src="{{ asset('images/hero-bg.png') }}" alt="Background" class="h-full w-full object-cover opacity-60">
             <div class="absolute inset-0 bg-gradient-to-b from-[#0f111a]/30 via-[#0f111a]/80 to-[#0f111a]"></div>
             <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
         </div>

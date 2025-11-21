@@ -25,18 +25,6 @@
             @enderror
         </div>
 
-        <!-- Role Selection -->
-        <div class="mt-6">
-            <label for="role" class="block font-medium text-sm text-gray-300">I want to be a:</label>
-            <select id="role" name="role" class="block mt-2 w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-white focus:border-blue-500 focus:bg-white/10 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm">
-                <option value="reader" class="bg-[#0f111a]">Reader</option>
-                <option value="author" class="bg-[#0f111a]">Author</option>
-            </select>
-            @error('role')
-                <span class="text-red-400 text-sm mt-2 block">{{ $message }}</span>
-            @enderror
-        </div>
-
         <!-- Password -->
         <div class="mt-6">
             <label for="password" class="block font-medium text-sm text-gray-300">Password</label>
@@ -53,14 +41,14 @@
         </div>
 
         <div class="mt-8">
-            <button type="submit" class="w-full rounded-full bg-blue-600 px-4 py-3 text-sm font-semibold text-white shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:bg-blue-500 hover:shadow-[0_0_30px_rgba(37,99,235,0.6)] transition-all duration-300 transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#0f111a]">
+            <button type="submit" class="cursor-pointer w-full rounded-full bg-blue-600 px-4 py-3 text-sm font-semibold text-white shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:bg-blue-500 hover:shadow-[0_0_30px_rgba(37,99,235,0.6)] transition-all duration-300 transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#0f111a]">
                 Register
             </button>
         </div>
 
         <div class="mt-6 text-center text-sm text-gray-400">
             Already have an account? 
-            <a href="{{ route('login') }}" class="font-medium text-blue-400 hover:text-blue-300 transition-colors">
+            <a href="{{ route('login') }}" class="cursor-pointer font-medium text-blue-400 hover:text-blue-300 transition-colors">
                 Log in
             </a>
         </div>
