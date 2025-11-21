@@ -59,8 +59,8 @@
                     
                     <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-300">
                         <a href="#" class="text-white hover:text-blue-400 transition-colors">Home</a>
-                        <a href="#" class="hover:text-blue-400 transition-colors">My Library</a>
-                        <a href="#" class="hover:text-blue-400 transition-colors">Genres</a>
+                        <!-- <a href="#" class="hover:text-blue-400 transition-colors">My Library</a>
+                        <a href="#" class="hover:text-blue-400 transition-colors">Genres</a> -->
                     </div>
                 </div>
 
@@ -78,10 +78,15 @@
                     @if (Route::has('login'))
                         <div class="flex items-center gap-3">
                             @auth
-                                <a href="{{ url('/dashboard') }}" class="rounded-full bg-blue-600 px-4 py-1.5 text-sm font-medium text-white hover:bg-blue-500 transition-colors">Dashboard</a>
-                            @else
+                                <a href="{{ url('/dashboard') }}" class="rounded-full bg-blue-600 px-4 py-1.5 text-sm font-medium text-white hover:bg-blue-500 transition-colors">Author Dashboard</a>
+                                <div class="h-8 w-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                                        <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                @else
                                 <a href="{{ route('login') }}" class="rounded-full bg-blue-600 px-5 py-1.5 text-sm font-medium text-white hover:bg-blue-500 transition-colors shadow-[0_0_15px_rgba(37,99,235,0.5)]">Log In</a>
-                                <div class="h-8 w-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-600">
+                                <div class="h-8 w-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-600">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
                                         <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
                                     </svg>

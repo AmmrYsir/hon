@@ -76,12 +76,8 @@ class AuthController extends Controller
 
         if ($user->hasRole('admin')) {
             return '/dashboard/admin';
-        } elseif ($user->hasRole('librarian')) {
-            return '/dashboard/librarian';
-        } elseif ($user->hasRole('author')) {
-            return '/dashboard/author';
         }
 
-        return '/dashboard/reader';
+        return '/';
     }
 }
